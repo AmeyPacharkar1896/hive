@@ -575,6 +575,7 @@ class AgentLoop(AgentProtocol):
                 store=self._conversation_store,
                 run_id=ctx.effective_run_id,
                 compaction_buffer_tokens=self._config.compaction_buffer_tokens,
+                compaction_buffer_ratio=self._config.compaction_buffer_ratio,
                 compaction_warning_buffer_tokens=(self._config.compaction_warning_buffer_tokens),
             )
             accumulator = OutputAccumulator(
